@@ -1,0 +1,59 @@
+.alert-error, .errorlist {
+    color: crimson;
+}
+
+.alert-success {
+    color: green;
+}
+
+.author {
+    color: #4582ec;
+    font-size: 18px;
+    font-weight: bold;
+    
+}
+
+.scape {
+    color: #4582ec;
+    font-size: 41px;
+    font-weight: bold;
+    margin-left: 40px;
+    
+}
+
+.container-fluid {
+    padding: 20px;
+    box-shadow:
+         inset 0 -3em 3em rgba(0,0,0,0.1),
+               0 0  0 2px rgb(255,255,255),
+               0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+.main-container {
+    display: flex;
+
+}
+
+.item {
+    padding: 40;
+    font-size: 200;
+    height: fit-content;
+    width: fit-content;
+}
+
+.item_1 {
+    flex-grow: 2;
+}
+
+
+.item_2 {
+    flex-grow: 1;
+    color: black;
+    font-size: 38px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-left: 80px;
+}
+
+
+   

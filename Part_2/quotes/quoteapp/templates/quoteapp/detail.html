@@ -1,0 +1,12 @@
+{% extends "quoteapp/base.html" %}
+
+{% block content %}
+{% load extract_tags %}
+
+<div class="container-fluid">
+    <p class="text">{{ quote.quote }}</p>
+    <p>by <small class="author">{{ author.full_name }}</small></p>
+    <p>Tags: <small> {{ quote.tags|tags }} </small></p>
+</div>
+
+{% endblock %}

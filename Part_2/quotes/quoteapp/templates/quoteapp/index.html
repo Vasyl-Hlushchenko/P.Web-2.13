@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Quotes to Scrape</title>
+    <nav>
+        <ul>
+            <li style="padding: 40px" class="scape"><a href="/" role="banner"> Quotes to Scrape </a></li>
+        </ul>
+    </nav>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"/>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'quoteapp/style.css' %}">
+</head>
+<body>
+<main style="margin-top: -60px" class="container">
+    <nav>
+        {% if user.is_authenticated %}
+            <ul>
+                <li><a href="{% url 'quoteapp:author' %}" role="button">Add author</a></li>
+                <li><a href="{% url 'quoteapp:quote' %}" role="button">Add quote</a></li>
+                <li><a href="{% url 'quoteapp:tag' %}" role="button">Add Tag</a></li>
+            </ul>
+            <ul>
+                <li>Welcome <b>{{ user.username }}!</b></li>
+                <li><a href="{% url 'users:logout' %}" role="button">Logout</a></li>
+            </ul>
+            {% else %}
+            <ul>
+                <li><a href="{% url 'users:signup' %}" role="button">Sign Up</a></li>
+                <li><a href="{% url 'users:login' %}" role="button">Login</a></li>
+            </ul>
+            {% endif %}
+    </nav>
+    <div class="main-container">
+        <div class="item item_1">
+        {% for quote in quotes %}
+            <div>
+                {% if quote %}
+                    <p>
+                        {% include "quoteapp/find_quote.html" with id=quote.author_id%}
+                    </p>    
+                {% else %}
+                    No quotes(
+                {% endif %}
+            </div> 
+        {% endfor %}
+        </div>
+        <div class="item item_2">
+            Top 10 tags:
+        </div>
+    </div>
+    
+    
+
+</main>
+</body>
+</html>

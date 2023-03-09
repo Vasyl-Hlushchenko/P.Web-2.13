@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Quote information</title>
+    <nav>
+        <ul>
+            <li style="padding: 40px" class="scape"><a href="/" role="banner"> Quotes to Scrape </a></li>
+        </ul>
+    </nav>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"/>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'quoteapp/style.css' %}">
+</head>
+<body>
+<main style="margin-top: -60px" class="container">
+    {% block content %} {% endblock %}
+</main>
+</body>
+</html>
