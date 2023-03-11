@@ -9,7 +9,6 @@ dist
 site
 .coverage
 coverage.xml
-config.py
 .netlify
 test.db
 log.txt
